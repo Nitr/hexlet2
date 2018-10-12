@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "hexlet_cli"
+require "hexlet_cli/cli"
+
+HexletCli::CLI.start
