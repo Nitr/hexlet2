@@ -38,4 +38,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-power_assert"
 
   spec.add_dependency "thor"
+  spec.add_development_dependency "httparty"
 end
