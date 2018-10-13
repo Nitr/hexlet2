@@ -3,8 +3,8 @@ require 'json'
 
 describe HexletCli do
   let(:http_client)          { double() }
-  let(:body)                 { { "amount": 7000 } }
-  let(:response)             { double(body: body.to_json) }
+  let(:body)                 { { amount: 7000 } }
+  let(:response)             { double(parsed_response: body) }
 
   subject { described_class }
 

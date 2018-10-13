@@ -7,10 +7,8 @@ module HexletCli
     end
 
     def convert(amount:, from:, to:)
-      uri = URI(API_URL)
-      uri.query = URI.encode_www_form(amount: amount, currency_in: from, currency_out: to)
-      response = @http_client.get(uri)
-      JSON.parse(response.body)["amount"]
+      response = @http_client.get(API_URL, query: { amount: amount, currency_in: from, currency_out: to })
+      response.parsed_response[:amount]
     end
   end
 end

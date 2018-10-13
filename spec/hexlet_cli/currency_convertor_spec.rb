@@ -3,8 +3,8 @@ require 'json'
 
 describe HexletCli::CurrencyConvertor do
   let(:http_client)          { double() }
-  let(:body)                 { { "amount": 7000 } }
-  let(:response)             { double(body: body.to_json) }
+  let(:body)                 { { amount: 7000 } }
+  let(:response)             { double(parsed_response: body) }
   let(:rest7_service_custom)  { HexletCli::Rest7Service.new(http_client) }
 
   subject {
