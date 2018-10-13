@@ -8,7 +8,7 @@ module HexletCli
 
     def convert(amount:, from:, to:)
       response = @http_client.get(API_URL, query: { amount: amount, currency_in: from, currency_out: to })
-      response.parsed_response[:amount]
+      response.parsed_response["amount"]
     end
   end
 end
